@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Link Scanner Options</title>
+  <style>
+    body { font: 14px system-ui, -apple-system, Segoe UI, Roboto; margin: 16px; width: 420px; }
+    input[type=text] { width: 100%; padding: 6px; box-sizing: border-box; }
+    button { padding: 6px 10px; margin-top: 10px; }
+    .muted { color: #666; }
+  </style>
+</head>
+<body>
+  <h3>VirusTotal API Key</h3>
+  <p class="muted">Get one at virustotal.com. For production, use a backend proxy; client keys can be extracted.</p>
+  <input id="key" type="text" placeholder="VT API key" />
+  <button id="save">Save</button>
+  <div id="status" class="muted" style="margin-top:8px;"></div>
+  <script src="options.js"></script>
+</body>
+</html>

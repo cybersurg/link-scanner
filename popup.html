@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Link Scanner</title>
+  <style>
+    body { font: 13px/1.4 system-ui, -apple-system, Segoe UI, Roboto; margin: 12px; width: 340px; }
+    .row { margin: 8px 0; }
+    input[type=text] { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 6px; }
+    button { padding: 8px 10px; border: 0; border-radius: 6px; cursor: pointer; }
+    .muted { color: #666; }
+    code { background: #f6f8fa; padding: 2px 4px; border-radius: 4px; }
+
+    /* Verdict chip */
+    .chip { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; padding: 4px 8px; border-radius: 999px; color: #fff; }
+    .chip.safe { background: #188038; }
+    .chip.suspicious { background: #f9ab00; color: #222; } /* darker text if you prefer, but we’ll keep white below */
+    .chip.malicious { background: #d93025; }
+
+    /* Count bars */
+    .bars { display: grid; gap: 6px; }
+    .bar { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 8px; }
+    .label { font-weight: 600; }
+    .track { height: 8px; background: #eee; border-radius: 999px; overflow: hidden; }
+    .fill { height: 100%; width: 0%; }
+    .fill.malicious { background: #d93025; }
+    .fill.suspicious { background: #f9ab00; }
+    .fill.harmless  { background: #188038; }
+
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .link { text-decoration: none; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <input id="url" type="text" placeholder="Paste URL to scan..." />
+  </div>
+  <div class="row actions">
+    <button id="scan">Scan</button>
+    <a href="#" id="openOptions" class="link muted" style="margin-left:auto">Options</a>
+  </div>
+
+  <div id="out" class="row"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

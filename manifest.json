@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Link Scanner (VT)",
+  "version": "0.1.0",
+  "description": "Right-click to scan links or selected URLs using VirusTotal.",
+  "action": {
+    "default_title": "Link Scanner",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["contextMenus", "storage"],
+  "host_permissions": ["https://www.virustotal.com/*"],
+  "background": { "service_worker": "background.js" },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "128": "icon128.png"
+  },
+  "options_page": "options.html"
+}

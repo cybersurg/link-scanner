@@ -1,0 +1,11 @@
+Link Scanner (VirusTotal) – Privacy Policy
+
+We do not collect, store, sell, or share personal data.
+
+Operation:
+• When you choose to scan, the URL you provide is sent directly from your browser to the VirusTotal API (virustotal.com) to obtain a threat assessment.
+• Your VirusTotal API key and the most recent scan result are stored locally in chrome.storage on your device.
+
+We do not read page content, browsing history, or any personal information. We do not operate servers for this product and we do not receive your data. For VirusTotal’s processing of submitted URLs, please refer to VirusTotal’s own privacy policy.
+
+Contact: dev@aliblog.me
